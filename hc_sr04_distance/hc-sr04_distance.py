@@ -4,6 +4,9 @@
 import RPi.GPIO as GPIO
 import time
 
+# set measurement interval (in seconds)
+MEASUREMENT_INTERVAL = 1
+
 # GPIO mode (BOARD / BCM)
 GPIO.setmode(GPIO.BOARD)
 
@@ -49,7 +52,7 @@ if __name__ == "__main__":
             dist = distance()
             print "Distance:", dist, "cm"
 
-            time.sleep(1)
+            time.sleep(MEASUREMENT_INTERVAL)
         
     # end program upon keyboard interrupt (ctrl+c)
     except KeyboardInterrupt:
