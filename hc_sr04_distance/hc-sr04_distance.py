@@ -17,7 +17,7 @@ GPIO.setup(PIN_ECHO, GPIO.IN)
 
 # allow sensor to settle for more accurate readings
 GPIO.output(PIN_TRIGGER, GPIO.LOW)
-print "waiting for sensor to settle"
+print "[waiting for sensor to settle]"
 time.sleep(2)
 
 # calculates distance
@@ -53,5 +53,5 @@ if __name__ == "__main__":
         
     # end program upon keyboard interrupt (ctrl+c)
     except KeyboardInterrupt:
-        print "stopping measurement"
+        print "[stopping measurement]"
         GPIO.cleanup()
