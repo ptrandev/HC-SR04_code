@@ -29,7 +29,7 @@ def distance():
     # deactivate sensor
     GPIO.output(PIN_TRIGGER, GPIO.LOW)
 
-    # calculate times for pulse to be sent and receivec
+    # calculate times for pulse to be sent and received
     while GPIO.input(PIN_ECHO) == 0:
         pulse_start_time = time.time()
     while GPIO.input(PIN_ECHO) == 1:
